@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Title of the web page -->
+        <title>NBA Player Statistics</title>
+
+        <!-- Let's add a bit of styling to make it look pretty -->
+        <link rel="stylesheet" href="/static/style.css">
+
+    </head>
+
+{% block content %}
+<h1>{{name}}</h1>
+{{ data.to_html(classes="table table-striped") | safe}}
+{% endblock %}

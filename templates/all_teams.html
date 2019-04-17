@@ -1,0 +1,11 @@
+<ul>
+{% for nm in team_names %}
+<li>{{ nm[0] }}: {{ nm[1]}}, {{ nm[2] }} </li><br>
+{% endfor %}
+</ul>
+
+{% if not team_names %}
+There are no teams to show.
+{% endif %}
+
+<a href="{{ url_for('index')}}">Return to home page</a>
