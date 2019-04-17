@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, session, redirect, url_for
+from flask import Flask, render_template, session, redirect, url_for, request
 import os
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
@@ -88,6 +88,22 @@ nba_players = players.get_players()
 #####################################################################
 ## Main route
 #
+
+# Route for handling the login page logic
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != '' or request.form['password'] != '':
+            return redirect(url_for('index'))
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            error = 'Invalid Credentials. Please try again.'
+    return render_template('login.html', error=error)
+
+
+
+
 @app.route('/')
 def index():
 

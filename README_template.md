@@ -1,6 +1,6 @@
 # AaronDM NBA Statistics Final Project
 
-Name
+Aaron Miller
 
 [Link to this repository](https://github.com/ADM36/SI507_final_project)
 
@@ -8,11 +8,12 @@ Name
 
 ## Project Description
 
-This should be a brief description of what your project is and does.  
+This project allows a user to access statistics on people who have played in the National Basketball Association (NBA) through stats.nba.com. By accessing these statistics, a user can build their own database of key statistics on NBA players, as well as a list of NBA teams. A user can also retrieve, for viewing, information on NBA statistics "leaders" (e.g. most points, rebounds, etc.) from various NBA seasons.
 
 ## How to run
 
-1. First, you should ... (e.g. install all requirements with `pip install -r requirements.txt`)
+1. First, install all requirements with `pip install -r requirements.txt`.
+2. Get familiar with the nba_api (https://github.com/swar/nba_api/blob/master/README.md) to understand how classes are working when pulling data from the API.
 2. Second, you should ... (e.g. run `python programname.py runserver` or whatever else is appropriate)
 3. Anything else
 
@@ -23,10 +24,15 @@ This should be a brief description of what your project is and does.
 3. (Optional): Markdown syntax to include an screenshot/image: ![alt text](image.jpg)
 
 ## Routes in this application
-- `/home` -> this is the home page
-- `/form` -> this route has a form for user input
-- `/result` -> this route is where the form sends the result...
-- `/newuser/<username>` -> this route also takes input of a name and shows you a greeting
+- `/` -> This is the home page, which plays an intro video for the 2019 NBA playoffs.
+
+- `/teams` -> This route prints out a list of all NBA teams, and the city and state they are located. It also creates a table "nba_teams" for an external database.
+
+- `/career_stats/<player_name>/` -> This route allows a user to input an NBA player name into the form to both print career, season statistics on the NBA player being searched, while also adding that data to a table "nba_players" for external data usage.
+
+- `/leaders/<years>/<season_type>/<stat>/` -> This route has an input of an NBA season in the format XXXX-XX (e.g. 2003-04), season type (e.g. Regular Season) and a NBA player stat (e.g. PTS), which will print out data from the specified NBA season year and season type with NBA players who had the highest number of the specified statistic.
+
+- '/bio/<player_name>/ -> This route allows a user to input a player name, and retrieve a print out of a short biography on the NBA player they searched.
 
 ## How to run tests
 1. First... (e.g. access a certain directory if necessary)
@@ -35,11 +41,22 @@ This should be a brief description of what your project is and does.
 NOTE: Need not have 3 steps, but should have as many as are appropriate!
 
 ## In this repository:
-- Directory Name
-  - File in directory
-  - File in directory
-- File name
-- File name
+- SI507_final_project
+  - static
+    - style.css
+  - templates
+    - analysis.html
+    - all_teams.html
+  - common_player.py
+  - leauge_leader_nba.py
+  - nba_507.py
+  - nba_flask.py
+  - nba_players.db
+  - player_stats.py
+  - README_template.md
+  - requirements.txt
+  - SI507project_final.py
+  - SI507project_tools.py
 
 ---
 ## Code Requirements for Grading
@@ -50,35 +67,35 @@ Please check the requirements you have accomplished in your code as demonstrated
 Below is a list of the requirements listed in the rubric for you to copy and paste.  See rubric on Canvas for more details.
 
 ### General
-- [ ] Project is submitted as a Github repository
-- [ ] Project includes a working Flask application that runs locally on a computer
+- [x] Project is submitted as a Github repository
+- [x] Project includes a working Flask application that runs locally on a computer
 - [ ] Project includes at least 1 test suite file with reasonable tests in it.
-- [ ] Includes a `requirements.txt` file containing all required modules to run program
+- [x] Includes a `requirements.txt` file containing all required modules to run program
 - [ ] Includes a clear and readable README.md that follows this template
-- [ ] Includes a sample .sqlite/.db file
+- [x] Includes a sample .sqlite/.db file
 - [ ] Includes a diagram of your database schema
-- [ ] Includes EVERY file needed in order to run the project
+- [x] Includes EVERY file needed in order to run the project
 - [ ] Includes screenshots and/or clear descriptions of what your project should look like when it is working
 
 ### Flask Application
-- [ ] Includes at least 3 different routes
+- [x] Includes at least 3 different routes
 - [ ] View/s a user can see when the application runs that are understandable/legible for someone who has NOT taken this course
-- [ ] Interactions with a database that has at least 2 tables
-- [ ] At least 1 relationship between 2 tables in database
-- [ ] Information stored in the database is viewed or interacted with in some way
+- [x] Interactions with a database that has at least 2 tables
+- [x] At least 1 relationship between 2 tables in database
+- [x] Information stored in the database is viewed or interacted with in some way
 
 ### Additional Components (at least 6 required)
-- [ ] Use of a new module
+- [x] Use of a new module
 - [ ] Use of a second new module
 - [ ] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
 - [ ] A many-to-many relationship in your database structure
 - [ ] At least one form in your Flask application
-- [ ] Templating in your Flask application
-- [ ] Inclusion of JavaScript files in the application
+- [x] Templating in your Flask application
+- [x] Inclusion of JavaScript files in the application
 - [ ] Links in the views of Flask application page/s
 - [ ] Relevant use of `itertools` and/or `collections`
 - [ ] Sourcing of data using web scraping
-- [ ] Sourcing of data using web REST API requests
+- [x] Sourcing of data using web REST API requests
 - [ ] Sourcing of data using user input and/or a downloaded .csv or .json dataset
 - [ ] Caching of data you continually retrieve from the internet in some way
 
