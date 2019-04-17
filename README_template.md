@@ -1,8 +1,8 @@
-# Project Title
+# AaronDM NBA Statistics Final Project
 
 Name
 
-[Link to this repository](https://www.example.com)
+[Link to this repository](https://github.com/ADM36/SI507_final_project)
 
 ---
 
