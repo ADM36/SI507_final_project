@@ -38,10 +38,9 @@ This project allows a user to access statistics on people who have played in the
 - '/bio/<player_name>/ -> This route allows a user to input a player name, and retrieve a print out of a short biography on the NBA player they searched.
 
 ## How to run tests
-1. First... (e.g. access a certain directory if necessary)
-2. Second (e.g. any other setup necessary)
-3. etc (e.g. run the specific test file)
-NOTE: Need not have 3 steps, but should have as many as are appropriate!
+1. Make sure you have not made changes by adding more data to sqlite database/tables. If you have done this then one of the tests will NOT pass.
+2. Run the SI507project_tests.py.
+3. Check that the output in the terminal (bash) you ran the above test file in prints out results of the tests. It should show that all 4 tests ran, without error (prints out "OK").
 
 ## In this repository:
 - SI507_final_project
@@ -51,6 +50,7 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
     - analysis.html
     - all_teams.html
     - login.html
+    - home.html
   - common_player.py
   - leauge_leader_nba.py
   - nba_507.py
@@ -61,6 +61,7 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
   - requirements.txt
   - SI507project_final.py
   - SI507project_tools.py
+  - SI507project_tests.py
 
 ---
 ## Code Requirements for Grading
@@ -75,11 +76,11 @@ Below is a list of the requirements listed in the rubric for you to copy and pas
 - [x] Project includes a working Flask application that runs locally on a computer
 - [x] Project includes at least 1 test suite file with reasonable tests in it.
 - [x] Includes a `requirements.txt` file containing all required modules to run program
-- [ ] Includes a clear and readable README.md that follows this template
+- [x] Includes a clear and readable README.md that follows this template
 - [x] Includes a sample .sqlite/.db file
 - [x] Includes a diagram of your database schema
 - [x] Includes EVERY file needed in order to run the project
-- [ ] Includes screenshots and/or clear descriptions of what your project should look like when it is working
+- [x] Includes screenshots and/or clear descriptions of what your project should look like when it is working
 
 ### Flask Application
 - [x] Includes at least 3 different routes
