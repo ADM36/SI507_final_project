@@ -7,6 +7,7 @@ idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
+mysql-connector==2.2.9
 nba-api==1.1.2
 numpy==1.16.2
 pandas==0.24.2
