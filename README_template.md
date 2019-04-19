@@ -2,7 +2,7 @@
 
 Aaron Miller
 
-[Link to this repository](https://github.com/ADM36/SI507_final_project)
+(https://github.com/ADM36/SI507_final_project)
 
 ---
 
@@ -14,14 +14,27 @@ This project allows a user to access statistics on people who have played in the
 
 1. First, install all requirements with `pip install -r requirements.txt`.
 2. Get familiar with the nba_api (https://github.com/swar/nba_api/blob/master/README.md) to understand how classes are working when pulling data from the API.
-2. Second, you should ... (e.g. run `python programname.py runserver` or whatever else is appropriate)
-3. Anything else
+3. Next, you should run the test file SI507project_tests.py to make sure that all tests will pass. It is important to do this BEFORE adding data to your database through API calls.
+4. Next, you should inspect the SI507project_final.py file to understand what the different @app routes do. Some of these routes will require you to enter in information you wish to request in the web URL.
+5. Run SI507project_final.py, which if all goes correctly, your terminal should print out:
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+* Restarting with stat
+* Debugger is active!
+* Debugger PIN: 341-928-223
+6. Next you should enter either http://127.0.0.1:5000/ into your URL to first access the home page and intro video, OR enter http://127.0.0.1:5000/login to login to the website.
+
 
 ## How to use
 
-1. A useful instruction goes here
-2. A useful second step here
-3. (Optional): Markdown syntax to include an screenshot/image: ![alt text](image.jpg)
+1. If you want to find brief biographical information on an NBA player, you should use the route http://127.0.0.1:5000/bio/<player_name>/, where you manually enter a NBA players name for <player_name>, for example, http://127.0.0.1:5000/bio/Rasheed Wallace/
+
+2. If you want to find statistics for NBA players based on the highest performing players in a NBA statistical category (assists, points, rebounds) in a given NBA season, you should use the route http://127.0.0.1:5000/leaders/<years>/<season_type>/<stat>/, where you manually enter a season for <year>, a type of season (Regular, Playoff) and a NBA statistic (AST for assist), for example, http://127.0.0.1:5000/leaders/1990-91/Regular Season/REB
+
+3. If you want to find brief information on every current NBA team, you should use the route http://127.0.0.1:5000/teams.
+
+4. If you want to add career statistics on any NBA player to your sqlite database, and have that information printed to a webpage, you should use the route http://127.0.0.1:5000//career_stats/<player_name>/, where you manually enter a NBA players name for <player_name>, for example, http://127.0.0.1:5000/career_stats/Rasheed Wallace/
+
+5. If you want to query the database you have created, nba_players.db, find that file in the folder where you ran SI507project_final.py. Launch that file in the DB Browser for sqlite application(download here - https://sqlitebrowser.org/).
 
 ## Routes in this application
 
@@ -51,6 +64,10 @@ This project allows a user to access statistics on people who have played in the
     - all_teams.html
     - login.html
     - home.html
+  - screenshots
+    - login.png
+    - teams.png
+    - stats.png
   - common_player.py
   - leauge_leader_nba.py
   - nba_507.py
