@@ -73,7 +73,7 @@ Below is a list of the requirements listed in the rubric for you to copy and pas
 ### General
 - [x] Project is submitted as a Github repository
 - [x] Project includes a working Flask application that runs locally on a computer
-- [ ] Project includes at least 1 test suite file with reasonable tests in it.
+- [x] Project includes at least 1 test suite file with reasonable tests in it.
 - [x] Includes a `requirements.txt` file containing all required modules to run program
 - [ ] Includes a clear and readable README.md that follows this template
 - [x] Includes a sample .sqlite/.db file
@@ -83,20 +83,20 @@ Below is a list of the requirements listed in the rubric for you to copy and pas
 
 ### Flask Application
 - [x] Includes at least 3 different routes
-- [ ] View/s a user can see when the application runs that are understandable/legible for someone who has NOT taken this course
+- [x] View/s a user can see when the application runs that are understandable/legible for someone who has NOT taken this course
 - [x] Interactions with a database that has at least 2 tables
 - [x] At least 1 relationship between 2 tables in database
 - [x] Information stored in the database is viewed or interacted with in some way
 
 ### Additional Components (at least 6 required)
 - [x] Use of a new module
-- [ ] Use of a second new module
+- [x] Use of a second new module
 - [ ] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
 - [ ] A many-to-many relationship in your database structure
 - [x] At least one form in your Flask application
 - [x] Templating in your Flask application
 - [x] Inclusion of JavaScript files in the application
-- [ ] Links in the views of Flask application page/s
+- [x] Links in the views of Flask application page/s
 - [ ] Relevant use of `itertools` and/or `collections`
 - [ ] Sourcing of data using web scraping
 - [x] Sourcing of data using web REST API requests

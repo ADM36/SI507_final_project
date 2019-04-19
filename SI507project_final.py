@@ -113,9 +113,10 @@ def index():
     # media = vlc.MediaPlayer(best.url)
     # media.play()
 
-    webbrowser.open("https://www.youtube.com/watch?v=qY2UEVA87pI")
+    webbrowser.open("https://www.youtube.com/embed/qY2UEVA87pI")
 
-    return OK
+    return render_template('home.html')
+
 
 @app.route('/career_stats/<player_name>/')
 def new_player(player_name):

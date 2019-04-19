@@ -1,4 +1,9 @@
 <ul>
+<a href="{{ url_for('index')}}">Launch NBA hype video!</a><br>
+<a href="{{ url_for('login')}}">Return to login page</a>
+</ul>
+
+<ul>
 {% for nm in team_names %}
 <li>{{ nm[0] }}: {{ nm[1]}}, {{ nm[2] }} </li><br>
 {% endfor %}
@@ -7,5 +12,3 @@
 {% if not team_names %}
 There are no teams to show.
 {% endif %}
-
-<!-- <a href="{{ url_for('index')}}">Return to home page</a> -->
